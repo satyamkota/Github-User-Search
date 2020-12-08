@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import GithubAPI from "./component/GithubAPI";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+
+        <nav className="navbar navbar-dark bg-dark">
+          <a href="/" className="navbar-brand">React With Github User Search (http calls)</a>
+        </nav>
+
+       <GithubAPI />
+       
+
+      </div>
+    )
+  }
 }
-
 export default App;
